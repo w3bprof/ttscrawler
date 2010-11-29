@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ZetaCrawler.ASPNETCrawler" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ASPNETCrawler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZetaCrawler.ASPNETObject" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>WAADKkRABQEgAGAQAIBLBIB6FIAAoAA0ABQYDgAUBKg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZetaCrawler.BIDVCrawler">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>BIDVCrawler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZetaCrawler.BIDVObject" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>WAADKgQAAQEgAEAQAqBJBIA6FIBAgAA0ACQIDgAUBAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZetaCrawler.Contact" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIADgEFQACkAAEAcFBEDAMJQFAEAAABCCIQAJAJUAgg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZetaCrawler.Category" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAACQAAAAAAAAAAABCAAAAAAAAACAAAUAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZetaCrawler.DumperStep">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DumperStep.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZetaCrawler.ObjectStart" Collapsed="true">
+    <Position X="2.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>wBACCAACAAABgAAAQAAAEAAARgAAAkAAGAAAAgAUAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZetaCrawler.Mp3ZingItem" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACKARBBAAAAGAAQoADAIBgBIBIIAAwCDAQDAAUFKA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZetaCrawler.Object" Collapsed="true">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>WIBnCpRABVRBEGIwAIBrDgg6XICkowCSoAAfDkAWDCg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="NCrawler.Interfaces.IPipelineStep">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="NCrawler.Interfaces.ICrawlerQueue" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="NCrawler.Interfaces.ICrawlerRules" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="NCrawler.Interfaces.ICrawlerHistory" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="NCrawler.Interfaces.IRobot" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

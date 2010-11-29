@@ -1,0 +1,5 @@
+D:\NCrawler\NCrawler\Net 4.0\ZetaMusicServices\bin\ZetaMusicServices.dll
+D:\NCrawler\NCrawler\Net 4.0\ZetaMusicServices\bin\ZetaMusicServices.pdb
+D:\NCrawler\NCrawler\Net 4.0\ZetaMusicServices\obj\Debug\ResolveAssemblyReference.cache
+D:\NCrawler\NCrawler\Net 4.0\ZetaMusicServices\obj\Debug\ZetaMusicServices.dll
+D:\NCrawler\NCrawler\Net 4.0\ZetaMusicServices\obj\Debug\ZetaMusicServices.pdb

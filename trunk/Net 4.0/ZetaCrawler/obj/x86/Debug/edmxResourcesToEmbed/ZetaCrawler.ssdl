@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZetaCrawlerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ZetaCrawlerModelStoreContainer">
+    <EntitySet Name="ASPNETObject" EntityType="ZetaCrawlerModel.Store.ASPNETObject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BIDVObject" EntityType="ZetaCrawlerModel.Store.BIDVObject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="ZetaCrawlerModel.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Contact" EntityType="ZetaCrawlerModel.Store.Contact" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MappingContactCategory" EntityType="ZetaCrawlerModel.Store.MappingContactCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Mp3ZingItem" EntityType="ZetaCrawlerModel.Store.Mp3ZingItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Mp3ZingObject" EntityType="ZetaCrawlerModel.Store.Mp3ZingObject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Object" EntityType="ZetaCrawlerModel.Store.Object" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ObjectStart" EntityType="ZetaCrawlerModel.Store.ObjectStart" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ASPNETObject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterSet" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+    <Property Name="DownloadTime" Type="real" />
+    <Property Name="Headers" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsFromCache" Type="bit" />
+    <Property Name="IsMutuallyAuthenticated" Type="bit" />
+    <Property Name="LastModified" Type="datetime" />
+    <Property Name="Method" Type="nvarchar" MaxLength="50" />
+    <Property Name="OriginalReferrerUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="OriginalUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProtocolVersion" Type="nvarchar" MaxLength="500" />
+    <Property Name="Referrer" Type="nvarchar" MaxLength="50" />
+    <Property Name="GetResponse" Type="nvarchar" MaxLength="500" />
+    <Property Name="ResponseUri" Type="nvarchar" MaxLength="500" />
+    <Property Name="Server" Type="nvarchar" MaxLength="250" />
+    <Property Name="StatusCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="Step" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Summary" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsToEmail" Type="bit" />
+    <Property Name="Depth" Type="int" />
+  </EntityType>
+  <EntityType Name="BIDVObject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterSet" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+    <Property Name="DownloadTime" Type="real" />
+    <Property Name="Headers" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsFromCache" Type="bit" />
+    <Property Name="IsMutuallyAuthenticated" Type="bit" />
+    <Property Name="LastModified" Type="datetime" />
+    <Property Name="Method" Type="nvarchar" MaxLength="50" />
+    <Property Name="OriginalReferrerUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="OriginalUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProtocolVersion" Type="nvarchar" MaxLength="500" />
+    <Property Name="Referrer" Type="nvarchar" MaxLength="50" />
+    <Property Name="GetResponse" Type="nvarchar" MaxLength="500" />
+    <Property Name="ResponseUri" Type="nvarchar" MaxLength="500" />
+    <Property Name="Server" Type="nvarchar" MaxLength="250" />
+    <Property Name="StatusCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="Step" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Summary" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsToEmail" Type="bit" />
+    <Property Name="Depth" Type="int" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="YahooID" Type="nvarchar" MaxLength="50" />
+    <Property Name="GoogleID" Type="nvarchar" MaxLength="50" />
+    <Property Name="SkypeID" Type="nvarchar" MaxLength="50" />
+    <Property Name="FacebookID" Type="nvarchar" MaxLength="50" />
+    <Property Name="TwitterID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="350" />
+    <Property Name="IsNewsletter" Type="bit" />
+  </EntityType>
+  <EntityType Name="MappingContactCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContactID" Type="int" />
+    <Property Name="CategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="Mp3ZingItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="nvarchar" MaxLength="500" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+    <Property Name="Length" Type="int" />
+    <Property Name="Depth" Type="int" />
+    <Property Name="NgayPhatHanh" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="550" />
+  </EntityType>
+  <EntityType Name="Mp3ZingObject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterSet" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+    <Property Name="DownloadTime" Type="real" />
+    <Property Name="Headers" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsFromCache" Type="bit" />
+    <Property Name="IsMutuallyAuthenticated" Type="bit" />
+    <Property Name="LastModified" Type="datetime" />
+    <Property Name="Method" Type="nvarchar" MaxLength="50" />
+    <Property Name="OriginalReferrerUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="OriginalUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProtocolVersion" Type="nvarchar" MaxLength="500" />
+    <Property Name="Referrer" Type="nvarchar" MaxLength="50" />
+    <Property Name="GetResponse" Type="nvarchar" MaxLength="500" />
+    <Property Name="ResponseUri" Type="nvarchar" MaxLength="500" />
+    <Property Name="Server" Type="nvarchar" MaxLength="250" />
+    <Property Name="StatusCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="Step" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Summary" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsToEmail" Type="bit" />
+    <Property Name="Depth" Type="int" />
+  </EntityType>
+  <EntityType Name="Object">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterSet" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+    <Property Name="DownloadTime" Type="real" />
+    <Property Name="Headers" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsFromCache" Type="bit" />
+    <Property Name="IsMutuallyAuthenticated" Type="bit" />
+    <Property Name="LastModified" Type="datetime" />
+    <Property Name="Method" Type="nvarchar" MaxLength="50" />
+    <Property Name="OriginalReferrerUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="OriginalUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProtocolVersion" Type="nvarchar" MaxLength="500" />
+    <Property Name="Referrer" Type="nvarchar" MaxLength="50" />
+    <Property Name="GetResponse" Type="nvarchar" MaxLength="500" />
+    <Property Name="ResponseUri" Type="nvarchar" MaxLength="500" />
+    <Property Name="Server" Type="nvarchar" MaxLength="250" />
+    <Property Name="StatusCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="Step" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Depth" Type="int" />
+  </EntityType>
+  <EntityType Name="ObjectStart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Website" Type="nvarchar" MaxLength="350" />
+    <Property Name="Url" Type="nvarchar" MaxLength="350" />
+    <Property Name="UrlStart" Type="nvarchar" MaxLength="350" />
+    <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+</Schema>

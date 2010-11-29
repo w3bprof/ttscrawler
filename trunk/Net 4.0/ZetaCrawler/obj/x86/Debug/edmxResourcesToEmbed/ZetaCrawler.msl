@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZetaCrawlerModelStoreContainer" CdmEntityContainer="ZetaCrawlerEntities">
+    <EntitySetMapping Name="ASPNETObjects">
+      <EntityTypeMapping TypeName="ZetaCrawlerModel.ASPNETObject">
+        <MappingFragment StoreEntitySet="ASPNETObject">
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="IsToEmail" ColumnName="IsToEmail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Step" ColumnName="Step" />
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="Server" ColumnName="Server" />
+          <ScalarProperty Name="ResponseUri" ColumnName="ResponseUri" />
+          <ScalarProperty Name="GetResponse" ColumnName="GetResponse" />
+          <ScalarProperty Name="Referrer" ColumnName="Referrer" />
+          <ScalarProperty Name="ProtocolVersion" ColumnName="ProtocolVersion" />
+          <ScalarProperty Name="OriginalUrl" ColumnName="OriginalUrl" />
+          <ScalarProperty Name="OriginalReferrerUrl" ColumnName="OriginalReferrerUrl" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="IsMutuallyAuthenticated" ColumnName="IsMutuallyAuthenticated" />
+          <ScalarProperty Name="IsFromCache" ColumnName="IsFromCache" />
+          <ScalarProperty Name="Headers" ColumnName="Headers" />
+          <ScalarProperty Name="DownloadTime" ColumnName="DownloadTime" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+          <ScalarProperty Name="CharacterSet" ColumnName="CharacterSet" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BIDVObjects">
+      <EntityTypeMapping TypeName="ZetaCrawlerModel.BIDVObject">
+        <MappingFragment StoreEntitySet="BIDVObject">
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="IsToEmail" ColumnName="IsToEmail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Step" ColumnName="Step" />
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="Server" ColumnName="Server" />
+          <ScalarProperty Name="ResponseUri" ColumnName="ResponseUri" />
+          <ScalarProperty Name="GetResponse" ColumnName="GetResponse" />
+          <ScalarProperty Name="Referrer" ColumnName="Referrer" />
+          <ScalarProperty Name="ProtocolVersion" ColumnName="ProtocolVersion" />
+          <ScalarProperty Name="OriginalUrl" ColumnName="OriginalUrl" />
+          <ScalarProperty Name="OriginalReferrerUrl" ColumnName="OriginalReferrerUrl" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="IsMutuallyAuthenticated" ColumnName="IsMutuallyAuthenticated" />
+          <ScalarProperty Name="IsFromCache" ColumnName="IsFromCache" />
+          <ScalarProperty Name="Headers" ColumnName="Headers" />
+          <ScalarProperty Name="DownloadTime" ColumnName="DownloadTime" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+          <ScalarProperty Name="CharacterSet" ColumnName="CharacterSet" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="ZetaCrawlerModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="ZetaCrawlerModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="IsNewsletter" ColumnName="IsNewsletter" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="TwitterID" ColumnName="TwitterID" />
+          <ScalarProperty Name="FacebookID" ColumnName="FacebookID" />
+          <ScalarProperty Name="SkypeID" ColumnName="SkypeID" />
+          <ScalarProperty Name="GoogleID" ColumnName="GoogleID" />
+          <ScalarProperty Name="YahooID" ColumnName="YahooID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mp3ZingItem">
+      <EntityTypeMapping TypeName="ZetaCrawlerModel.Mp3ZingItem">
+        <MappingFragment StoreEntitySet="Mp3ZingItem">
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="NgayPhatHanh" ColumnName="NgayPhatHanh" />
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mp3ZingObject">
+      <EntityTypeMapping TypeName="ZetaCrawlerModel.Mp3ZingObject">
+        <MappingFragment StoreEntitySet="Mp3ZingObject">
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="IsToEmail" ColumnName="IsToEmail" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Step" ColumnName="Step" />
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="Server" ColumnName="Server" />
+          <ScalarProperty Name="ResponseUri" ColumnName="ResponseUri" />
+          <ScalarProperty Name="GetResponse" ColumnName="GetResponse" />
+          <ScalarProperty Name="Referrer" ColumnName="Referrer" />
+          <ScalarProperty Name="ProtocolVersion" ColumnName="ProtocolVersion" />
+          <ScalarProperty Name="OriginalUrl" ColumnName="OriginalUrl" />
+          <ScalarProperty Name="OriginalReferrerUrl" ColumnName="OriginalReferrerUrl" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="IsMutuallyAuthenticated" ColumnName="IsMutuallyAuthenticated" />
+          <ScalarProperty Name="IsFromCache" ColumnName="IsFromCache" />
+          <ScalarProperty Name="Headers" ColumnName="Headers" />
+          <ScalarProperty Name="DownloadTime" ColumnName="DownloadTime" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+          <ScalarProperty Name="CharacterSet" ColumnName="CharacterSet" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Objects">
+      <EntityTypeMapping TypeName="ZetaCrawlerModel.Object">
+        <MappingFragment StoreEntitySet="Object">
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Step" ColumnName="Step" />
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="Server" ColumnName="Server" />
+          <ScalarProperty Name="ResponseUri" ColumnName="ResponseUri" />
+          <ScalarProperty Name="GetResponse" ColumnName="GetResponse" />
+          <ScalarProperty Name="Referrer" ColumnName="Referrer" />
+          <ScalarProperty Name="ProtocolVersion" ColumnName="ProtocolVersion" />
+          <ScalarProperty Name="OriginalUrl" ColumnName="OriginalUrl" />
+          <ScalarProperty Name="OriginalReferrerUrl" ColumnName="OriginalReferrerUrl" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="IsMutuallyAuthenticated" ColumnName="IsMutuallyAuthenticated" />
+          <ScalarProperty Name="IsFromCache" ColumnName="IsFromCache" />
+          <ScalarProperty Name="Headers" ColumnName="Headers" />
+          <ScalarProperty Name="DownloadTime" ColumnName="DownloadTime" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+          <ScalarProperty Name="CharacterSet" ColumnName="CharacterSet" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObjectStarts">
+      <EntityTypeMapping TypeName="ZetaCrawlerModel.ObjectStart">
+        <MappingFragment StoreEntitySet="ObjectStart">
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="UrlStart" ColumnName="UrlStart" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MappingContactCategories">
+      <EntityTypeMapping TypeName="ZetaCrawlerModel.MappingContactCategory">
+        <MappingFragment StoreEntitySet="MappingContactCategory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
