@@ -65,6 +65,9 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -79,17 +82,25 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AdvancedCrawlDemo.cs" />
+    <Compile Include="BIDVCrawlerDemo.cs" />
     <Compile Include="CrawlUsingDbStorage.cs" />
     <Compile Include="CrawlUsingDb4oStorage.cs" />
     <Compile Include="CrawlUsingEsentStorage.cs" />
     <Compile Include="CrawlUsingIsolatedStorage.cs" />
     <Compile Include="CrawlUsingSQLiteDbStorage.cs" />
+    <Compile Include="EmailHelper.cs" />
+    <Compile Include="EmailNotify.cs" />
     <Compile Include="Extensions\TextWriterExtensions.cs" />
     <Compile Include="FindBrokenLinksDemo.cs" />
     <Compile Include="IndexerDemo.cs" />
+    <Compile Include="Mp3ZingCrawlerDemo.cs" />
+    <Compile Include="Mp3ZingDumperStep.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanTriMangCrawlerDemo.cs" />
     <Compile Include="SimpleCrawlDemo.cs" />
+    <Compile Include="TextExtraction.cs" />
+    <Compile Include="TextMining.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NCrawler.Db4oServices\NCrawler.Db4oServices.csproj">
@@ -103,6 +114,10 @@
     <ProjectReference Include="..\NCrawler.EsentServices\NCrawler.EsentServices.csproj">
       <Project>{D82B1354-F267-4C35-9FC0-6910A5C44304}</Project>
       <Name>NCrawler.EsentServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler.FileStorageServices\NCrawler.FileStorageServices.csproj">
+      <Project>{944F9961-7B7D-4384-9946-705237E7E195}</Project>
+      <Name>NCrawler.FileStorageServices</Name>
     </ProjectReference>
     <ProjectReference Include="..\NCrawler.HtmlProcessor\NCrawler.HtmlProcessor.csproj">
       <Project>{A8ADB9E8-359E-4CFB-97D7-59E1E705DE04}</Project>
@@ -128,9 +143,17 @@
       <Project>{8DBF9F2F-A8BD-45B1-8750-C7CB63611425}</Project>
       <Name>NCrawler.MP3Processor</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NCrawler.SitemapProcessor\NCrawler.SitemapProcessor.csproj">
+      <Project>{4C550C30-9CCD-4CAB-8E9C-C1A4D6619953}</Project>
+      <Name>NCrawler.SitemapProcessor</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NCrawler\NCrawler.csproj">
       <Project>{5E4DF149-F650-4152-8410-586FB9CCF644}</Project>
       <Name>NCrawler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextExtraction\TextExtraction.csproj">
+      <Project>{0A61EB7F-C694-4DE5-A9B9-20C58C8E4910}</Project>
+      <Name>TextExtraction</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
