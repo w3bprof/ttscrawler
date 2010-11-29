@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ZetaCrawlerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ZetaCrawlerModelStoreContainer">
+          <EntitySet Name="ASPNETObject" EntityType="ZetaCrawlerModel.Store.ASPNETObject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BIDVObject" EntityType="ZetaCrawlerModel.Store.BIDVObject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Category" EntityType="ZetaCrawlerModel.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contact" EntityType="ZetaCrawlerModel.Store.Contact" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MappingContactCategory" EntityType="ZetaCrawlerModel.Store.MappingContactCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Mp3ZingItem" EntityType="ZetaCrawlerModel.Store.Mp3ZingItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Mp3ZingObject" EntityType="ZetaCrawlerModel.Store.Mp3ZingObject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Object" EntityType="ZetaCrawlerModel.Store.Object" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ObjectStart" EntityType="ZetaCrawlerModel.Store.ObjectStart" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ASPNETObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CharacterSet" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+          <Property Name="DownloadTime" Type="real" />
+          <Property Name="Headers" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsFromCache" Type="bit" />
+          <Property Name="IsMutuallyAuthenticated" Type="bit" />
+          <Property Name="LastModified" Type="datetime" />
+          <Property Name="Method" Type="nvarchar" MaxLength="50" />
+          <Property Name="OriginalReferrerUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="OriginalUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="ProtocolVersion" Type="nvarchar" MaxLength="500" />
+          <Property Name="Referrer" Type="nvarchar" MaxLength="50" />
+          <Property Name="GetResponse" Type="nvarchar" MaxLength="500" />
+          <Property Name="ResponseUri" Type="nvarchar" MaxLength="500" />
+          <Property Name="Server" Type="nvarchar" MaxLength="250" />
+          <Property Name="StatusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="Step" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsToEmail" Type="bit" />
+          <Property Name="Depth" Type="int" />
+        </EntityType>
+        <EntityType Name="BIDVObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CharacterSet" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+          <Property Name="DownloadTime" Type="real" />
+          <Property Name="Headers" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsFromCache" Type="bit" />
+          <Property Name="IsMutuallyAuthenticated" Type="bit" />
+          <Property Name="LastModified" Type="datetime" />
+          <Property Name="Method" Type="nvarchar" MaxLength="50" />
+          <Property Name="OriginalReferrerUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="OriginalUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="ProtocolVersion" Type="nvarchar" MaxLength="500" />
+          <Property Name="Referrer" Type="nvarchar" MaxLength="50" />
+          <Property Name="GetResponse" Type="nvarchar" MaxLength="500" />
+          <Property Name="ResponseUri" Type="nvarchar" MaxLength="500" />
+          <Property Name="Server" Type="nvarchar" MaxLength="250" />
+          <Property Name="StatusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="Step" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsToEmail" Type="bit" />
+          <Property Name="Depth" Type="int" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="YahooID" Type="nvarchar" MaxLength="50" />
+          <Property Name="GoogleID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SkypeID" Type="nvarchar" MaxLength="50" />
+          <Property Name="FacebookID" Type="nvarchar" MaxLength="50" />
+          <Property Name="TwitterID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="350" />
+          <Property Name="IsNewsletter" Type="bit" />
+        </EntityType>
+        <EntityType Name="MappingContactCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ContactID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+        </EntityType>
+        <EntityType Name="Mp3ZingItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Url" Type="nvarchar" MaxLength="500" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Text" Type="nvarchar(max)" />
+          <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+          <Property Name="Length" Type="int" />
+          <Property Name="Depth" Type="int" />
+          <Property Name="NgayPhatHanh" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="550" />
+        </EntityType>
+        <EntityType Name="Mp3ZingObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CharacterSet" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+          <Property Name="DownloadTime" Type="real" />
+          <Property Name="Headers" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsFromCache" Type="bit" />
+          <Property Name="IsMutuallyAuthenticated" Type="bit" />
+          <Property Name="LastModified" Type="datetime" />
+          <Property Name="Method" Type="nvarchar" MaxLength="50" />
+          <Property Name="OriginalReferrerUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="OriginalUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="ProtocolVersion" Type="nvarchar" MaxLength="500" />
+          <Property Name="Referrer" Type="nvarchar" MaxLength="50" />
+          <Property Name="GetResponse" Type="nvarchar" MaxLength="500" />
+          <Property Name="ResponseUri" Type="nvarchar" MaxLength="500" />
+          <Property Name="Server" Type="nvarchar" MaxLength="250" />
+          <Property Name="StatusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="Step" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsToEmail" Type="bit" />
+          <Property Name="Depth" Type="int" />
+        </EntityType>
+        <EntityType Name="Object">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CharacterSet" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+          <Property Name="DownloadTime" Type="real" />
+          <Property Name="Headers" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsFromCache" Type="bit" />
+          <Property Name="IsMutuallyAuthenticated" Type="bit" />
+          <Property Name="LastModified" Type="datetime" />
+          <Property Name="Method" Type="nvarchar" MaxLength="50" />
+          <Property Name="OriginalReferrerUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="OriginalUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="ProtocolVersion" Type="nvarchar" MaxLength="500" />
+          <Property Name="Referrer" Type="nvarchar" MaxLength="50" />
+          <Property Name="GetResponse" Type="nvarchar" MaxLength="500" />
+          <Property Name="ResponseUri" Type="nvarchar" MaxLength="500" />
+          <Property Name="Server" Type="nvarchar" MaxLength="250" />
+          <Property Name="StatusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="Step" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Depth" Type="int" />
+        </EntityType>
+        <EntityType Name="ObjectStart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Website" Type="nvarchar" MaxLength="350" />
+          <Property Name="Url" Type="nvarchar" MaxLength="350" />
+          <Property Name="UrlStart" Type="nvarchar" MaxLength="350" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZetaCrawlerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ZetaCrawlerEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ASPNETObjects" EntityType="ZetaCrawlerModel.ASPNETObject" />
+          <EntitySet Name="BIDVObjects" EntityType="ZetaCrawlerModel.BIDVObject" />
+          <EntitySet Name="Categories" EntityType="ZetaCrawlerModel.Category" />
+          <EntitySet Name="Contacts" EntityType="ZetaCrawlerModel.Contact" />
+          <EntitySet Name="MappingContactCategories" EntityType="ZetaCrawlerModel.MappingContactCategory" />
+          <EntitySet Name="Mp3ZingItem" EntityType="ZetaCrawlerModel.Mp3ZingItem" />
+          <EntitySet Name="Mp3ZingObject" EntityType="ZetaCrawlerModel.Mp3ZingObject" />
+          <EntitySet Name="Objects" EntityType="ZetaCrawlerModel.Object" />
+          <EntitySet Name="ObjectStarts" EntityType="ZetaCrawlerModel.ObjectStart" />
+        </EntityContainer>
+        <EntityType Name="ASPNETObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CharacterSet" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ContentEncoding" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="ContentType" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="DownloadTime" Type="Single" />
+          <Property Name="Headers" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="IsFromCache" Type="Boolean" />
+          <Property Name="IsMutuallyAuthenticated" Type="Boolean" />
+          <Property Name="LastModified" Type="DateTime" />
+          <Property Name="Method" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OriginalReferrerUrl" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="OriginalUrl" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ProtocolVersion" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Referrer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GetResponse" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ResponseUri" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Server" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="StatusCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StatusDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Step" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Summary" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="IsToEmail" Type="Boolean" />
+          <Property Name="Depth" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BIDVObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CharacterSet" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ContentEncoding" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="ContentType" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="DownloadTime" Type="Single" />
+          <Property Name="Headers" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="IsFromCache" Type="Boolean" />
+          <Property Name="IsMutuallyAuthenticated" Type="Boolean" />
+          <Property Name="LastModified" Type="DateTime" />
+          <Property Name="Method" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OriginalReferrerUrl" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="OriginalUrl" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ProtocolVersion" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Referrer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GetResponse" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ResponseUri" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Server" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="StatusCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StatusDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Step" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Summary" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="IsToEmail" Type="Boolean" />
+          <Property Name="Depth" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="YahooID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GoogleID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SkypeID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FacebookID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TwitterID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="350" Unicode="true" FixedLength="false" />
+          <Property Name="IsNewsletter" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="MappingContactCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContactID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Mp3ZingItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Url" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ContentEncoding" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="ContentType" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Length" Type="Int32" />
+          <Property Name="Depth" Type="Int32" />
+          <Property Name="NgayPhatHanh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Subject" Type="String" MaxLength="550" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Mp3ZingObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CharacterSet" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ContentEncoding" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="ContentType" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="DownloadTime" Type="Single" />
+          <Property Name="Headers" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="IsFromCache" Type="Boolean" />
+          <Property Name="IsMutuallyAuthenticated" Type="Boolean" />
+          <Property Name="LastModified" Type="DateTime" />
+          <Property Name="Method" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OriginalReferrerUrl" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="OriginalUrl" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ProtocolVersion" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Referrer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GetResponse" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ResponseUri" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Server" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="StatusCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StatusDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Step" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Summary" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="IsToEmail" Type="Boolean" />
+          <Property Name="Depth" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Object">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CharacterSet" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ContentEncoding" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="ContentType" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="DownloadTime" Type="Single" />
+          <Property Name="Headers" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="IsFromCache" Type="Boolean" />
+          <Property Name="IsMutuallyAuthenticated" Type="Boolean" />
+          <Property Name="LastModified" Type="DateTime" />
+          <Property Name="Method" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OriginalReferrerUrl" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="OriginalUrl" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ProtocolVersion" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Referrer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GetResponse" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ResponseUri" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Server" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="StatusCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StatusDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Step" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Depth" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ObjectStart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Website" Type="String" MaxLength="350" Unicode="true" FixedLength="false" />
+          <Property Name="Url" Type="String" MaxLength="350" Unicode="true" FixedLength="false" />
+          <Property Name="UrlStart" Type="String" MaxLength="350" Unicode="true" FixedLength="false" />
+          <Property Name="Tags" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZetaCrawlerModelStoreContainer" CdmEntityContainer="ZetaCrawlerEntities1">
+          <EntitySetMapping Name="ASPNETObjects"><EntityTypeMapping TypeName="ZetaCrawlerModel.ASPNETObject"><MappingFragment StoreEntitySet="ASPNETObject">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CharacterSet" ColumnName="CharacterSet" />
+            <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+            <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+            <ScalarProperty Name="DownloadTime" ColumnName="DownloadTime" />
+            <ScalarProperty Name="Headers" ColumnName="Headers" />
+            <ScalarProperty Name="IsFromCache" ColumnName="IsFromCache" />
+            <ScalarProperty Name="IsMutuallyAuthenticated" ColumnName="IsMutuallyAuthenticated" />
+            <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+            <ScalarProperty Name="Method" ColumnName="Method" />
+            <ScalarProperty Name="OriginalReferrerUrl" ColumnName="OriginalReferrerUrl" />
+            <ScalarProperty Name="OriginalUrl" ColumnName="OriginalUrl" />
+            <ScalarProperty Name="ProtocolVersion" ColumnName="ProtocolVersion" />
+            <ScalarProperty Name="Referrer" ColumnName="Referrer" />
+            <ScalarProperty Name="GetResponse" ColumnName="GetResponse" />
+            <ScalarProperty Name="ResponseUri" ColumnName="ResponseUri" />
+            <ScalarProperty Name="Server" ColumnName="Server" />
+            <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+            <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+            <ScalarProperty Name="Step" ColumnName="Step" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="Summary" ColumnName="Summary" />
+            <ScalarProperty Name="IsToEmail" ColumnName="IsToEmail" />
+            <ScalarProperty Name="Depth" ColumnName="Depth" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BIDVObjects"><EntityTypeMapping TypeName="ZetaCrawlerModel.BIDVObject"><MappingFragment StoreEntitySet="BIDVObject">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CharacterSet" ColumnName="CharacterSet" />
+            <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+            <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+            <ScalarProperty Name="DownloadTime" ColumnName="DownloadTime" />
+            <ScalarProperty Name="Headers" ColumnName="Headers" />
+            <ScalarProperty Name="IsFromCache" ColumnName="IsFromCache" />
+            <ScalarProperty Name="IsMutuallyAuthenticated" ColumnName="IsMutuallyAuthenticated" />
+            <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+            <ScalarProperty Name="Method" ColumnName="Method" />
+            <ScalarProperty Name="OriginalReferrerUrl" ColumnName="OriginalReferrerUrl" />
+            <ScalarProperty Name="OriginalUrl" ColumnName="OriginalUrl" />
+            <ScalarProperty Name="ProtocolVersion" ColumnName="ProtocolVersion" />
+            <ScalarProperty Name="Referrer" ColumnName="Referrer" />
+            <ScalarProperty Name="GetResponse" ColumnName="GetResponse" />
+            <ScalarProperty Name="ResponseUri" ColumnName="ResponseUri" />
+            <ScalarProperty Name="Server" ColumnName="Server" />
+            <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+            <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+            <ScalarProperty Name="Step" ColumnName="Step" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="Summary" ColumnName="Summary" />
+            <ScalarProperty Name="IsToEmail" ColumnName="IsToEmail" />
+            <ScalarProperty Name="Depth" ColumnName="Depth" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Categories"><EntityTypeMapping TypeName="ZetaCrawlerModel.Category"><MappingFragment StoreEntitySet="Category">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Contacts"><EntityTypeMapping TypeName="ZetaCrawlerModel.Contact"><MappingFragment StoreEntitySet="Contact">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="YahooID" ColumnName="YahooID" />
+            <ScalarProperty Name="GoogleID" ColumnName="GoogleID" />
+            <ScalarProperty Name="SkypeID" ColumnName="SkypeID" />
+            <ScalarProperty Name="FacebookID" ColumnName="FacebookID" />
+            <ScalarProperty Name="TwitterID" ColumnName="TwitterID" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="IsNewsletter" ColumnName="IsNewsletter" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MappingContactCategories"><EntityTypeMapping TypeName="ZetaCrawlerModel.MappingContactCategory"><MappingFragment StoreEntitySet="MappingContactCategory">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+            <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Mp3ZingItem"><EntityTypeMapping TypeName="ZetaCrawlerModel.Mp3ZingItem"><MappingFragment StoreEntitySet="Mp3ZingItem">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Url" ColumnName="Url" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+            <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+            <ScalarProperty Name="Length" ColumnName="Length" />
+            <ScalarProperty Name="Depth" ColumnName="Depth" />
+            <ScalarProperty Name="NgayPhatHanh" ColumnName="NgayPhatHanh" />
+            <ScalarProperty Name="Subject" ColumnName="Subject" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Mp3ZingObject"><EntityTypeMapping TypeName="ZetaCrawlerModel.Mp3ZingObject"><MappingFragment StoreEntitySet="Mp3ZingObject">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CharacterSet" ColumnName="CharacterSet" />
+            <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+            <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+            <ScalarProperty Name="DownloadTime" ColumnName="DownloadTime" />
+            <ScalarProperty Name="Headers" ColumnName="Headers" />
+            <ScalarProperty Name="IsFromCache" ColumnName="IsFromCache" />
+            <ScalarProperty Name="IsMutuallyAuthenticated" ColumnName="IsMutuallyAuthenticated" />
+            <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+            <ScalarProperty Name="Method" ColumnName="Method" />
+            <ScalarProperty Name="OriginalReferrerUrl" ColumnName="OriginalReferrerUrl" />
+            <ScalarProperty Name="OriginalUrl" ColumnName="OriginalUrl" />
+            <ScalarProperty Name="ProtocolVersion" ColumnName="ProtocolVersion" />
+            <ScalarProperty Name="Referrer" ColumnName="Referrer" />
+            <ScalarProperty Name="GetResponse" ColumnName="GetResponse" />
+            <ScalarProperty Name="ResponseUri" ColumnName="ResponseUri" />
+            <ScalarProperty Name="Server" ColumnName="Server" />
+            <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+            <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+            <ScalarProperty Name="Step" ColumnName="Step" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="Summary" ColumnName="Summary" />
+            <ScalarProperty Name="IsToEmail" ColumnName="IsToEmail" />
+            <ScalarProperty Name="Depth" ColumnName="Depth" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Objects"><EntityTypeMapping TypeName="ZetaCrawlerModel.Object"><MappingFragment StoreEntitySet="Object">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CharacterSet" ColumnName="CharacterSet" />
+            <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+            <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+            <ScalarProperty Name="DownloadTime" ColumnName="DownloadTime" />
+            <ScalarProperty Name="Headers" ColumnName="Headers" />
+            <ScalarProperty Name="IsFromCache" ColumnName="IsFromCache" />
+            <ScalarProperty Name="IsMutuallyAuthenticated" ColumnName="IsMutuallyAuthenticated" />
+            <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+            <ScalarProperty Name="Method" ColumnName="Method" />
+            <ScalarProperty Name="OriginalReferrerUrl" ColumnName="OriginalReferrerUrl" />
+            <ScalarProperty Name="OriginalUrl" ColumnName="OriginalUrl" />
+            <ScalarProperty Name="ProtocolVersion" ColumnName="ProtocolVersion" />
+            <ScalarProperty Name="Referrer" ColumnName="Referrer" />
+            <ScalarProperty Name="GetResponse" ColumnName="GetResponse" />
+            <ScalarProperty Name="ResponseUri" ColumnName="ResponseUri" />
+            <ScalarProperty Name="Server" ColumnName="Server" />
+            <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+            <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+            <ScalarProperty Name="Step" ColumnName="Step" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="Depth" ColumnName="Depth" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ObjectStarts"><EntityTypeMapping TypeName="ZetaCrawlerModel.ObjectStart"><MappingFragment StoreEntitySet="ObjectStart">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Website" ColumnName="Website" />
+            <ScalarProperty Name="Url" ColumnName="Url" />
+            <ScalarProperty Name="UrlStart" ColumnName="UrlStart" />
+            <ScalarProperty Name="Tags" ColumnName="Tags" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ZetaCrawler" ZoomLevel="61">
+        <EntityTypeShape EntityType="ZetaCrawlerModel.ASPNETObject" Width="1.5" PointX="0.75" PointY="0.75" Height="5.8263151041666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.BIDVObject" Width="1.5" PointX="2.75" PointY="0.75" Height="5.8263151041666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.Category" Width="1.5" PointX="4.75" PointY="0.75" Height="1.4033821614583326" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.Contact" Width="1.5" PointX="4.75" PointY="3.75" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.MappingContactCategory" Width="1.5" PointX="6.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.Mp3ZingItem" Width="1.5" PointX="6.75" PointY="3.75" Height="2.941793619791667" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.Mp3ZingObject" Width="1.5" PointX="0.75" PointY="7.75" Height="5.8263151041666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.Object" Width="1.5" PointX="6.75" PointY="7.75" Height="5.4417122395833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.ObjectStart" Width="1.5" PointX="8.75" PointY="0.75" Height="1.9802864583333317" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
