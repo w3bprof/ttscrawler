@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZetaMusicModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ZetaMusicModelStoreContainer">
+    <EntitySet Name="Category" EntityType="ZetaMusicModel.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Object" EntityType="ZetaMusicModel.Store.Object" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Object_Category" Association="ZetaMusicModel.Store.FK_Object_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Object" EntitySet="Object" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Object">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Title" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Introduction" Type="nvarchar(max)" />
+    <Property Name="Authors" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Singers" Type="nvarchar" MaxLength="2000" />
+    <Property Name="FileType" Type="nchar" MaxLength="10" />
+    <Property Name="FileSize" Type="real" />
+    <Property Name="PlayTime" Type="real" />
+    <Property Name="ViewCount" Type="int" />
+    <Property Name="PostBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Tags" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <Association Name="FK_Object_Category">
+    <End Role="Category" Type="ZetaMusicModel.Store.Category" Multiplicity="0..1" />
+    <End Role="Object" Type="ZetaMusicModel.Store.Object" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Object">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

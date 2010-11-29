@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZetaMusicModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ZetaMusicEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="ZetaMusicModel.Category" />
+    <EntitySet Name="Objects" EntityType="ZetaMusicModel.Object" />
+    <AssociationSet Name="FK_Object_Category" Association="ZetaMusicModel.FK_Object_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Object" EntitySet="Objects" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Objects" Relationship="ZetaMusicModel.FK_Object_Category" FromRole="Category" ToRole="Object" />
+  </EntityType>
+  <EntityType Name="Object">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="Introduction" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Authors" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="Singers" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="FileType" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="FileSize" Type="Single" />
+    <Property Name="PlayTime" Type="Single" />
+    <Property Name="ViewCount" Type="Int32" />
+    <Property Name="PostBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Tags" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Category" Relationship="ZetaMusicModel.FK_Object_Category" FromRole="Object" ToRole="Category" />
+  </EntityType>
+  <Association Name="FK_Object_Category">
+    <End Role="Category" Type="ZetaMusicModel.Category" Multiplicity="0..1" />
+    <End Role="Object" Type="ZetaMusicModel.Object" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Object">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

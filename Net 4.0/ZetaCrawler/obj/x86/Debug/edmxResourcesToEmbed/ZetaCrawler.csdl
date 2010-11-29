@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZetaCrawlerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ZetaCrawlerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ASPNETObjects" EntityType="ZetaCrawlerModel.ASPNETObject" />
+    <EntitySet Name="BIDVObjects" EntityType="ZetaCrawlerModel.BIDVObject" />
+    <EntitySet Name="Categories" EntityType="ZetaCrawlerModel.Category" />
+    <EntitySet Name="Contacts" EntityType="ZetaCrawlerModel.Contact" />
+    <EntitySet Name="Mp3ZingItem" EntityType="ZetaCrawlerModel.Mp3ZingItem" />
+    <EntitySet Name="Mp3ZingObject" EntityType="ZetaCrawlerModel.Mp3ZingObject" />
+    <EntitySet Name="Objects" EntityType="ZetaCrawlerModel.Object" />
+    <EntitySet Name="ObjectStarts" EntityType="ZetaCrawlerModel.ObjectStart" />
+    <EntitySet Name="MappingContactCategories" EntityType="ZetaCrawlerModel.MappingContactCategory" />
+  </EntityContainer>
+  <EntityType Name="ASPNETObject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CharacterSet" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentEncoding" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentType" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="DownloadTime" />
+    <Property Type="String" Name="Headers" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsFromCache" />
+    <Property Type="Boolean" Name="IsMutuallyAuthenticated" />
+    <Property Type="DateTime" Name="LastModified" />
+    <Property Type="String" Name="Method" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OriginalReferrerUrl" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OriginalUrl" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProtocolVersion" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Referrer" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GetResponse" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ResponseUri" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Server" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusDescription" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Step" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Summary" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsToEmail" />
+    <Property Type="Int32" Name="Depth" />
+  </EntityType>
+  <EntityType Name="BIDVObject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CharacterSet" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentEncoding" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentType" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="DownloadTime" />
+    <Property Type="String" Name="Headers" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsFromCache" />
+    <Property Type="Boolean" Name="IsMutuallyAuthenticated" />
+    <Property Type="DateTime" Name="LastModified" />
+    <Property Type="String" Name="Method" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OriginalReferrerUrl" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OriginalUrl" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProtocolVersion" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Referrer" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GetResponse" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ResponseUri" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Server" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusDescription" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Step" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Summary" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsToEmail" />
+    <Property Type="Int32" Name="Depth" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CategoryName" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="YahooID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GoogleID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SkypeID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FacebookID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TwitterID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsNewsletter" />
+  </EntityType>
+  <EntityType Name="Mp3ZingItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Url" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentEncoding" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentType" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Length" />
+    <Property Type="Int32" Name="Depth" />
+    <Property Type="String" Name="NgayPhatHanh" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Subject" MaxLength="550" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Mp3ZingObject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CharacterSet" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentEncoding" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentType" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="DownloadTime" />
+    <Property Type="String" Name="Headers" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsFromCache" />
+    <Property Type="Boolean" Name="IsMutuallyAuthenticated" />
+    <Property Type="DateTime" Name="LastModified" />
+    <Property Type="String" Name="Method" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OriginalReferrerUrl" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OriginalUrl" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProtocolVersion" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Referrer" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GetResponse" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ResponseUri" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Server" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusDescription" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Step" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Summary" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsToEmail" />
+    <Property Type="Int32" Name="Depth" />
+  </EntityType>
+  <EntityType Name="Object">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CharacterSet" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentEncoding" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentType" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="DownloadTime" />
+    <Property Type="String" Name="Headers" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsFromCache" />
+    <Property Type="Boolean" Name="IsMutuallyAuthenticated" />
+    <Property Type="DateTime" Name="LastModified" />
+    <Property Type="String" Name="Method" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OriginalReferrerUrl" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OriginalUrl" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProtocolVersion" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Referrer" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GetResponse" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ResponseUri" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Server" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusDescription" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Step" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Depth" />
+  </EntityType>
+  <EntityType Name="ObjectStart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Website" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Url" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UrlStart" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tags" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MappingContactCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ContactID" />
+    <Property Type="Int32" Name="CategoryID" />
+  </EntityType>
+</Schema>

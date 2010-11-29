@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32B85A6E-45A7-4B92-9D3F-C614D6D05532}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZetaCrawler</RootNamespace>
+    <AssemblyName>ZetaCrawler</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BIDVCrawler.cs" />
+    <Compile Include="BIDVMsg.cs" />
+    <Compile Include="ASPNETCrawler.cs" />
+    <Compile Include="ASPNETObjectDumperStep.cs" />
+    <Compile Include="DumperStep.cs" />
+    <Compile Include="EmailNotify.cs" />
+    <Compile Include="Extensions\TextWriterExtensions.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newsletter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextExtraction.cs" />
+    <Compile Include="WindowsUtil.cs" />
+    <Compile Include="ZetaCrawler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZetaCrawler.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ZingMp3Object.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.Config" />
+    <Compile Include="BIDVObjectDumperStep.cs" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="ZetaCrawler.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ZetaCrawler.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ZetaCrawler.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NCrawler.Console\NCrawler.Console.csproj">
+      <Project>{5BC126AF-4E49-4DEA-B013-E05CBC2C67F4}</Project>
+      <Name>NCrawler.Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler.Db4oServices\NCrawler.Db4oServices.csproj">
+      <Project>{8BC9BDCE-64E8-40D8-8691-8BC1DB8AF21E}</Project>
+      <Name>NCrawler.Db4oServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler.Demo\NCrawler.Demo.csproj">
+      <Project>{3FB98863-77C5-4459-B9BF-2AF1C904323C}</Project>
+      <Name>NCrawler.Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler.HtmlProcessor\NCrawler.HtmlProcessor.csproj">
+      <Project>{A8ADB9E8-359E-4CFB-97D7-59E1E705DE04}</Project>
+      <Name>NCrawler.HtmlProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler.IFilterProcessor\NCrawler.IFilterProcessor.csproj">
+      <Project>{FC4BAAF7-5749-4149-8D3C-3DA21A129999}</Project>
+      <Name>NCrawler.IFilterProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler.IsolatedStorageServices\NCrawler.IsolatedStorageServices.csproj">
+      <Project>{791A3998-A352-4DE8-88C7-6EE5C6FF1668}</Project>
+      <Name>NCrawler.IsolatedStorageServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler.iTextSharpPdfProcessor\NCrawler.iTextSharpPdfProcessor.csproj">
+      <Project>{1CC6DC28-0B0B-445D-8AE3-07F9823A9036}</Project>
+      <Name>NCrawler.iTextSharpPdfProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler.LanguageDetection.Google\NCrawler.LanguageDetection.Google.csproj">
+      <Project>{0E707ADD-8F93-4E65-BAE7-534D4C844060}</Project>
+      <Name>NCrawler.LanguageDetection.Google</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler.MP3Processor\NCrawler.MP3Processor.csproj">
+      <Project>{8DBF9F2F-A8BD-45B1-8750-C7CB63611425}</Project>
+      <Name>NCrawler.MP3Processor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCrawler\NCrawler.csproj">
+      <Project>{5E4DF149-F650-4152-8410-586FB9CCF644}</Project>
+      <Name>NCrawler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
