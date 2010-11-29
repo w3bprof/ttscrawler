@@ -93,17 +93,17 @@ namespace NCrawler.Demo
 
                 string[] strSplit = { "/" };
 
-                foreach (var item in db.Items)
-                {
-                    int day = int.Parse(item.NgayPhatHanh.Split(strSplit, StringSplitOptions.None)[0]);
-                    int month = int.Parse(item.NgayPhatHanh.Split(strSplit, StringSplitOptions.None)[1]);
-                    int year = int.Parse(item.NgayPhatHanh.Split(strSplit, StringSplitOptions.None)[2]);
+                //foreach (var item in db.obItems)
+                //{
+                //    int day = int.Parse(item.NgayPhatHanh.Split(strSplit, StringSplitOptions.None)[0]);
+                //    int month = int.Parse(item.NgayPhatHanh.Split(strSplit, StringSplitOptions.None)[1]);
+                //    int year = int.Parse(item.NgayPhatHanh.Split(strSplit, StringSplitOptions.None)[2]);
 
-                    if ((DateTime.Now.Year == year) && (DateTime.Now.Month == month) && (DateTime.Now.Day == day))
-                    {
-                        tmp.Add("<br /><b>" + item.Subject + "</b><br />Xem chi tiết : " + item.Url + "<br />");
-                    }
-                }
+                //    if ((DateTime.Now.Year == year) && (DateTime.Now.Month == month) && (DateTime.Now.Day == day))
+                //    {
+                //        tmp.Add("<br /><b>" + item.Subject + "</b><br />Xem chi tiết : " + item.Url + "<br />");
+                //    }
+                //}
 
                 return tmp;
             }

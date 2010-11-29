@@ -66,6 +66,9 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Extracting">
+      <HintPath>..\TextExtraction\Dll\System.Data.Extracting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq">
@@ -101,6 +104,11 @@
     <Compile Include="SimpleCrawlDemo.cs" />
     <Compile Include="TextExtraction.cs" />
     <Compile Include="TextMining.cs" />
+    <Compile Include="ZetaCrawler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZetaCrawler.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NCrawler.Db4oServices\NCrawler.Db4oServices.csproj">
@@ -180,6 +188,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <EntityDeploy Include="ZetaCrawler.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ZetaCrawler.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NCrawler.Demo.csproj.vspscc" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

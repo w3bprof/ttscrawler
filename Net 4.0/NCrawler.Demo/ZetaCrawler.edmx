@@ -196,7 +196,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ZetaCrawlerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="ZetaCrawlerEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ZetaCrawlerEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ASPNETObjects" EntityType="ZetaCrawlerModel.ASPNETObject" />
           <EntitySet Name="BIDVObjects" EntityType="ZetaCrawlerModel.BIDVObject" />
           <EntitySet Name="Categories" EntityType="ZetaCrawlerModel.Category" />
@@ -387,7 +387,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ZetaCrawlerModelStoreContainer" CdmEntityContainer="ZetaCrawlerEntities1">
+        <EntityContainerMapping StorageEntityContainer="ZetaCrawlerModelStoreContainer" CdmEntityContainer="ZetaCrawlerEntities">
           <EntitySetMapping Name="ASPNETObjects"><EntityTypeMapping TypeName="ZetaCrawlerModel.ASPNETObject"><MappingFragment StoreEntitySet="ASPNETObject">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="CharacterSet" ColumnName="CharacterSet" />
@@ -556,7 +556,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="ZetaCrawler" ZoomLevel="61">
+      <Diagram Name="ZetaCrawler" ZoomLevel="92">
         <EntityTypeShape EntityType="ZetaCrawlerModel.ASPNETObject" Width="1.5" PointX="0.75" PointY="0.75" Height="5.8263151041666656" IsExpanded="true" />
         <EntityTypeShape EntityType="ZetaCrawlerModel.BIDVObject" Width="1.5" PointX="2.75" PointY="0.75" Height="5.8263151041666656" IsExpanded="true" />
         <EntityTypeShape EntityType="ZetaCrawlerModel.Category" Width="1.5" PointX="4.75" PointY="0.75" Height="1.4033821614583326" IsExpanded="true" />

@@ -24,32 +24,32 @@ namespace NCrawler.Demo
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    public partial class ZetaCrawlerEntities1 : ObjectContext
+    public partial class ZetaCrawlerEntities : ObjectContext
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new ZetaCrawlerEntities1 object using the connection string found in the 'ZetaCrawlerEntities1' section of the application configuration file.
+        /// Initializes a new ZetaCrawlerEntities object using the connection string found in the 'ZetaCrawlerEntities' section of the application configuration file.
         /// </summary>
-        public ZetaCrawlerEntities1() : base("name=ZetaCrawlerEntities1", "ZetaCrawlerEntities1")
+        public ZetaCrawlerEntities() : base("name=ZetaCrawlerEntities", "ZetaCrawlerEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new ZetaCrawlerEntities1 object.
+        /// Initialize a new ZetaCrawlerEntities object.
         /// </summary>
-        public ZetaCrawlerEntities1(string connectionString) : base(connectionString, "ZetaCrawlerEntities1")
+        public ZetaCrawlerEntities(string connectionString) : base(connectionString, "ZetaCrawlerEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new ZetaCrawlerEntities1 object.
+        /// Initialize a new ZetaCrawlerEntities object.
         /// </summary>
-        public ZetaCrawlerEntities1(EntityConnection connection) : base(connection, "ZetaCrawlerEntities1")
+        public ZetaCrawlerEntities(EntityConnection connection) : base(connection, "ZetaCrawlerEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
