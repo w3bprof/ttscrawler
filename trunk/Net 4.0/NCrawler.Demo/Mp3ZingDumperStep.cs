@@ -10,7 +10,7 @@ using NCrawler.Interfaces;
 using NCrawler.Demo.Extensions;
 using NCrawler.MP3Processor;
 using System.Data;
-using System.Data.Extracting;
+//using System.Data.Extracting;
 
 namespace NCrawler.Demo
 {
@@ -20,7 +20,7 @@ namespace NCrawler.Demo
     /// Custom pipeline step, to dump url to console
     /// </summary>
     internal class Mp3ZingDumperStep : IPipelineStep
-    {
+    {                
         ZetaCrawlerEntities db;
 
         public Mp3ZingDumperStep()
