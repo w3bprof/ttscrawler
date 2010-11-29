@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ZetaCrawlerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ZetaCrawlerModelStoreContainer">
+          <EntitySet Name="Item" EntityType="ZetaCrawlerModel.Store.Item" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Mp3ZingItem" EntityType="ZetaCrawlerModel.Store.Mp3ZingItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Test" EntityType="ZetaCrawlerModel.Store.Test" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Url" Type="nvarchar" MaxLength="500" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Text" Type="nvarchar(max)" />
+          <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+          <Property Name="Length" Type="int" />
+          <Property Name="Depth" Type="int" />
+          <Property Name="NgayPhatHanh" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="550" />
+        </EntityType>
+        <EntityType Name="Mp3ZingItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Url" Type="nvarchar" MaxLength="500" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Text" Type="nvarchar(max)" />
+          <Property Name="ContentEncoding" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContentType" Type="nvarchar" MaxLength="250" />
+          <Property Name="Length" Type="int" />
+          <Property Name="Depth" Type="int" />
+          <Property Name="NgayPhatHanh" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="550" />
+        </EntityType>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Test" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZetaCrawlerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ZetaCrawlerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tests" EntityType="ZetaCrawlerModel.Test" />
+          <EntitySet Name="Items" EntityType="ZetaCrawlerModel.Item" />
+          <EntitySet Name="Mp3ZingItem" EntityType="ZetaCrawlerModel.Mp3ZingItem" />
+        </EntityContainer>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Test1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Url" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Title" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContentEncoding" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContentType" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Length" />
+          <Property Type="Int32" Name="Depth" />
+          <Property Type="String" Name="NgayPhatHanh" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Subject" MaxLength="550" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Mp3ZingItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Url" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Title" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContentEncoding" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContentType" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Length" />
+          <Property Type="Int32" Name="Depth" />
+          <Property Type="String" Name="NgayPhatHanh" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Subject" MaxLength="550" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZetaCrawlerModelStoreContainer" CdmEntityContainer="ZetaCrawlerEntities">
+          <EntitySetMapping Name="Tests"><EntityTypeMapping TypeName="ZetaCrawlerModel.Test"><MappingFragment StoreEntitySet="Test">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Test1" ColumnName="Test" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="ZetaCrawlerModel.Item">
+              <MappingFragment StoreEntitySet="Item">
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="NgayPhatHanh" ColumnName="NgayPhatHanh" />
+                <ScalarProperty Name="Depth" ColumnName="Depth" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+                <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mp3ZingItem">
+            <EntityTypeMapping TypeName="ZetaCrawlerModel.Mp3ZingItem">
+              <MappingFragment StoreEntitySet="Mp3ZingItem">
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="NgayPhatHanh" ColumnName="NgayPhatHanh" />
+                <ScalarProperty Name="Depth" ColumnName="Depth" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+                <ScalarProperty Name="ContentEncoding" ColumnName="ContentEncoding" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ZetaCrawler">
+        <EntityTypeShape EntityType="ZetaCrawlerModel.Test" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4033821614583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.Item" Width="1.5" PointX="3.375" PointY="0.75" Height="2.9417936197916656" />
+        <EntityTypeShape EntityType="ZetaCrawlerModel.Mp3ZingItem" Width="1.5" PointX="0.75" PointY="3.75" Height="2.9417936197916656" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
